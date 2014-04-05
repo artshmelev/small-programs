@@ -4,37 +4,35 @@
 // Insert O(logN) | O(N)
 // Delete O(logN) | O(N)
 
-#ifndef BST_H
-#define BST_H
+#ifndef BST_H_
+#define BST_H_
 
-class Node
-{
+class Node {
 public:
-    int key;
-    Node* left;
-    Node* right;
+  int key;
+  Node *left;
+  Node *right;
 
-    Node();
-    Node(int val);
+  Node();
+  Node(int val);
 };
 
-class BST
-{
+class BST {
 private:
-    Node* root;
+  Node *root;
 
-    void inorderWalk(Node* node);
-    void clear(Node* node);
+  void inorderWalk(Node *node);
+  void clear(Node *node);
 public:
-    BST();
-    ~BST();
-    void inorderWalk();
-    void insert(int val);
-    Node* search(int val);
-    int max();
-    int min();
-    int getRoot();
+  BST();
+  ~BST();
+  void inorderWalk();
+  void insert(int val);
+  Node* search(int val);
+  int max();
+  int min();
+  int getRoot();
 };
 
-#endif
+#endif // BST_H_
 
